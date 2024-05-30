@@ -1,0 +1,52 @@
+<configs>
+
+<append xpath="/blocks">
+	
+<block name="IZYCompactDewCollector">
+	<property name="Class" value="DewCollector"/>
+	<property name="UnlockedBy" value="craftingWorkstations"/>
+	<property name="CustomIcon" value="IZYCompactDewCollector" />
+	<property name="WorkstationIcon" value="ui_game_symbol_water"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="dewCollectorDesc"/>
+	<property name="Material" value="MFuelBarrelPolymer"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/CPdewcollector01.unity3d?CPdewcollector01.Prefab"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="116"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="RestrictSubmergedPlacement" value="true"/>
+	<property name="AllowedRotations" value="Basic90"/>
+	<property name="Path" value="solid"/>
+	<property name="IsDecoration" value="true"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="OpenSound" value="collector_open"/>
+	<property name="CloseSound" value="collector_close"/>
+	<property name="ConvertSound" value="collector_complete_item"/>
+	<property name="MinConvertTime" value="21600" /> <!-- 21600 Game Seconds = 6 Game Hours -->
+	<property name="MaxConvertTime" value="36000" /> <!-- 36000 Game Seconds = 10 Game Hours -->
+	<property name="ConvertToItem" value="drinkJarBoiledWater" />
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="MaxDamage" value="200"/>
+	<property name="HeatMapStrength" value="2"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property class="RepairItems">
+		<property name="resourceScrapPolymers" value="20"/>
+	</property>
+	<drop event="Harvest" name="resourceScrapPolymers" count="40,60" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="1,3" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceWaterFilter" count="0,1"/>
+	<property name="DestroyFX" value="blockdestroy_cloth,collector_destroy"/>
+	<property name="SortOrder1" value="B281"/>
+	<property name="SortOrder2" value="0100"/>
+	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+	<property name="Tags" value="workstationSkill,twitch_workstation"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+</block>
+
+</append>
+</configs>
